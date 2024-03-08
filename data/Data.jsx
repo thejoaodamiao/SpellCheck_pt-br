@@ -25,7 +25,7 @@ export default {
     },
 
     getDescription(){
-        this.description = ""
+        this.description = "sexo"
     },
     init(){
         const uniqueRandomWords = [];
@@ -41,7 +41,7 @@ export default {
         console.log(uniqueRandomWords)
 
         this.words = uniqueRandomWords;
-        description();
+        
         
     },
 

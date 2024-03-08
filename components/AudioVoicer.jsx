@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import "./AudioVoicer.css"
 import data  from"../data/Data"
 
-const AudioVoicer = ({word, buttonState = null}) => {
+const AudioVoicer = ({word, description = "", buttonState = null}) => {
 
   const [isPlaying, setIsPlaying] = useState(false);
 

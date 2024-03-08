@@ -11,13 +11,14 @@ const AudioVoicer = ({word, buttonState = null}) => {
   useEffect(() => {
     if (isPlaying) {
       // Configurar a síntese de fala ao iniciar a reprodução
+      
       const voicesList = window.speechSynthesis.getVoices();
       const utterance = new SpeechSynthesisUtterance(word);
       console.log(voicesList);
       utterance.voice = voicesList[1];
-      utterance.pitch = .1;
+      utterance.pitch = 1.5;
       utterance.rate = 1;
-
+      
       if(utterance.voice != null){
         console.log(utterance);
         utterance.onend = () => {
@@ -42,6 +43,8 @@ const AudioVoicer = ({word, buttonState = null}) => {
     }
   }, [isPlaying, word]);
 
+
+
   const handleButtonClick = () => {
     if (isPlaying) {
       // Se estiver parando, limpar o cache
@@ -55,16 +58,20 @@ const AudioVoicer = ({word, buttonState = null}) => {
 
   return (
     <div onClick={handleButtonClick} className={ `audioVoicer button-audio ${buttonState} `}>
-    {isPlaying && buttonState === null ? (
+    {/* {isPlaying && buttonState === null ? (
         <FaStop/>
       ) : (
         <FaPlay />
-    )}
-     {isPlaying && buttonState === true ? (
-        <FaCheck />
-      ) : (
-        <FaTimes />
-    )}
+    )} */}
+    {buttonState === null ? ({
+          true:<FaStop/>,
+          false: <FaPlay/>
+        }[isPlaying]) : 
+        ({
+          true: <FaCheck/>,
+          false: <FaTimes/>
+        }[buttonState])
+    }
     </div>
   )
 }

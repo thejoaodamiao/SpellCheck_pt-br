@@ -5,6 +5,7 @@ export default {
     count: 5,
     currentWord: "",
     guessNumber: 5,
+    description: "",
 
 
     game(guess){
@@ -22,6 +23,10 @@ export default {
         }
         
     },
+
+    getDescription(){
+        this.description = ""
+    },
     init(){
         const uniqueRandomWords = [];
         while (uniqueRandomWords.length < this.count) {
@@ -36,6 +41,8 @@ export default {
         console.log(uniqueRandomWords)
 
         this.words = uniqueRandomWords;
+        description();
+        
     },
 
 }

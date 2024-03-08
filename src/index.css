@@ -1,0 +1,27 @@
+*{
+    font-family:  Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body{
+    background-color: #212930;
+    color:#fff;
+
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #F83646;
+}
+
+a:hover{
+    color: #ffffff67;
+}

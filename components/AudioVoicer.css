@@ -41,7 +41,7 @@
     border-radius: 5px;
   }
   
-  .button-audio:active{
+.button-audio:active{
     top:10px;
     background-color:#F78900;
     text-decoration: none;
@@ -58,10 +58,23 @@
     top:10px;
 }
 
+
 .true{
+    top:10px;
     background-color:green;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 -3px 0 rgb(1, 80, 1);
+    -moz-box-shadow: inset 0 -3pxpx 0 rgb(1, 80, 1);
+    box-shadow: inset 0 -3px 0 rgb(1, 80, 1);
+    pointer-events: none;
 
 }
 .false{
-    background-color: red;
+    top:10px;
+    background-color:red;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 -3px 0 rgb(122, 2, 2);
+    -moz-box-shadow: inset 0 -3pxpx 0 rgb(122, 2, 2);
+    box-shadow: inset 0 -3px 0 rgb(122, 2, 2);
+    pointer-events: none;
 }

@@ -1,49 +1,10 @@
-import { FaStop, FaPlay, FaTimes,  FaCheck } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { FaStop, FaPlay, FaTimes, FaCheck } from "react-icons/fa";
+import "./AudioVoicer.css";
+import data from "../data/Data";
 
-import "./AudioVoicer.css"
-import data  from"../data/Data"
-
-const AudioVoicer = ({word, description = "", buttonState = null}) => {
-
+const AudioVoicer = ({ id, word, description = "", buttonState = null }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-
-  useEffect(() => {
-    if (isPlaying) {
-      // Configurar a síntese de fala ao iniciar a reprodução
-      
-      const voicesList = window.speechSynthesis.getVoices();
-      const utterance = new SpeechSynthesisUtterance(word);
-      console.log(voicesList);
-      utterance.voice = voicesList[1];
-      utterance.pitch = 1.5;
-      utterance.rate = 1;
-      
-      if(utterance.voice != null){
-        console.log(utterance);
-        utterance.onend = () => {
-        // Callback chamado quando a fala é concluída
-        setIsPlaying(false);
-        speechSynthesis.cancel();
-        };
-
-        utterance.onerror = () =>{
-          console.error('Speech synthesis error:', event.error);
-          speechSynthesis.cancel();
-        }
-        console.log(voicesList);
-      // Iniciar a síntese de fala
-        window.speechSynthesis.speak(utterance);
-
-        data.currentWord = word;
-
-      }
-
-      
-    }
-  }, [isPlaying, word]);
-
-
 
   const handleButtonClick = () => {
     if (isPlaying) {
@@ -53,27 +14,42 @@ const AudioVoicer = ({word, description = "", buttonState = null}) => {
     } else {
       // Se estiver iniciando, iniciar a reprodução
       setIsPlaying(true);
+      playWord();
     }
   };
 
-  return (
-    <div onClick={handleButtonClick} className={ `audioVoicer button-audio ${buttonState} `}>
-    {/* {isPlaying && buttonState === null ? (
-        <FaStop/>
-      ) : (
-        <FaPlay />
-    )} */}
-    {buttonState === null ? ({
-          true:<FaStop/>,
-          false: <FaPlay/>
-        }[isPlaying]) : 
-        ({
-          true: <FaCheck/>,
-          false: <FaTimes/>
-        }[buttonState])
-    }
-    </div>
-  )
-}
+  const playWord = () => {
+    // Cancelar qualquer reprodução em andamento
+    speechSynthesis.cancel();
 
-export default AudioVoicer
+    // Configurar a síntese de fala ao iniciar a reprodução
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.pitch = 0.5;
+    utterance.rate = 1;
+
+    // Callback chamado quando a fala é concluída
+    utterance.onend = () => {
+      setIsPlaying(false);
+    };
+
+    // Callback chamado em caso de erro na síntese de fala
+    utterance.onerror = (event) => {
+      console.error("Speech synthesis error:", event.error);
+      setIsPlaying(false);
+    };
+
+    // Iniciar a síntese de fala
+    window.speechSynthesis.speak(utterance);
+
+    // Atualizar o objeto currentWord do data
+    data.currentWord = { id: id, word: word };
+  };
+
+  return (
+    <div onClick={handleButtonClick} className={`audioVoicer button-audio ${buttonState ? "active" : ""}`}>
+      {buttonState === null ? (isPlaying ? <FaStop /> : <FaPlay />) : buttonState ? <FaCheck /> : <FaTimes />}
+    </div>
+  );
+};
+
+export default AudioVoicer;

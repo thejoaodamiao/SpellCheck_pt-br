@@ -3,14 +3,14 @@ import words from "./words_br.json"
 export default {
     words: [],
     count: 5,
-    currentWord: "",
+    currentWord: [],
     guessNumber: 5,
     description: "",
 
 
     game(guess){
         if(this.guessNumber > 0 ){
-            if(this.currentWord === guess){
+            if(this.currentWord.word === guess){
             
                 alert("acertou a palavra :)");
             }else{
@@ -22,6 +22,10 @@ export default {
             return
         }
         
+    },
+
+    includes(word){
+        return true || false
     },
 
     getDescription(){
@@ -41,8 +45,7 @@ export default {
         console.log(uniqueRandomWords)
 
         this.words = uniqueRandomWords;
-        
-        
+         
     },
 
 }

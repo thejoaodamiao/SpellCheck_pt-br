@@ -23,7 +23,9 @@ const AudioVoicer = ({ id, word, description = "", buttonState = null }) => {
     speechSynthesis.cancel();
 
     // Configurar a síntese de fala ao iniciar a reprodução
-    const utterance = new SpeechSynthesisUtterance(word);
+    
+    const utterance = new SpeechSynthesisUtterance(word + description);
+    console.log(word + description);
     utterance.pitch = 0.5;
     utterance.rate = 1;
 
@@ -46,7 +48,7 @@ const AudioVoicer = ({ id, word, description = "", buttonState = null }) => {
   };
 
   return (
-    <div onClick={handleButtonClick} className={`audioVoicer button-audio ${buttonState ? "active" : ""}`}>
+    <div onClick={handleButtonClick} className={`audioVoicer button-audio ${buttonState} ${isPlaying ? "active": ""}`}>
       {buttonState === null ? (isPlaying ? <FaStop /> : <FaPlay />) : buttonState ? <FaCheck /> : <FaTimes />}
     </div>
   );

@@ -23,6 +23,7 @@ const Qwerty = () => {
 
   const handleSubmit = () =>{
     data.game(inputText);
+    setInputText("")
   };
 
   return (

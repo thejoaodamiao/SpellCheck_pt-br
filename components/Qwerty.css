@@ -35,15 +35,15 @@
   color:white;
   font-family:Helvetica, sans-serif;
   font-weight:bold;
-  font-size:1rem;
+  font-size:1.5rem;
   text-align: center;
-  line-height: 2rem;
+  line-height: 2.2rem;
   text-decoration:none;
   background-color:#FFA12B;
   display:block;
   position:relative;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   user-select: none;
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
@@ -79,7 +79,8 @@
 }
   
 #delete{
-  width: 63px;
+  width: 84px;
+  line-height: 3rem;
   margin-left: 0.1rem; 
 }  
 
@@ -111,3 +112,24 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
   } */
+
+
+  @media screen and (max-width: 600px) {
+    .button{
+      width: 28px;
+      height: 50px;
+    }
+
+    #delete{
+      width: 54px;
+    }
+
+    #space{
+      width: 100px;
+    }
+
+    form{
+      padding: 2rem;
+    }
+
+  }

@@ -3,30 +3,36 @@ import words from "./words_br.json";
 export default {
     words: [],
     count: 5,
-    currentWord: "",
+    currentWord: null,
     guessNumber: 5,
     description: "",
     guess: [],
     onUpdateGuess: () => {}, // Função de retorno de chamada para atualizar guess
 
     game(guess) {
-        if (this.guessNumber > 0) {
-            const correct = this.currentWord === guess;
-            if (correct) {
-                alert("acertou a palavra :)");  
+        if(this.currentWord != null){
+            if (this.guessNumber > 0) {
+                const correct = this.currentWord === guess;
+                if (correct) {
+                    alert("acertou a palavra :)");  
+                } else {
+                    alert("errou irmão, burrão");
+                }
+                this.guess.push({ word: this.currentWord, correct });
+                this.guessNumber--;
+                console.log(this.guessNumber);
+                console.log(this.guess);
+                console.log(this.currentWord);
+                this.currentWord = null;
+        
+                // Atualize o estado de guess usando a função de retorno de chamada
+                this.onUpdateGuess([...this.guess]); // Passando uma nova referência de array para forçar a atualização
             } else {
-                alert("errou irmão, burrão");
+                alert("cabou as chances");
+                return;
             }
-            this.guess.push({ word: this.currentWord, correct });
-            this.guessNumber--;
-            console.log(this.guessNumber);
-            console.log(this.guess);
-            console.log(this.currentWord);
-    
-            // Atualize o estado de guess usando a função de retorno de chamada
-            this.onUpdateGuess([...this.guess]); // Passando uma nova referência de array para forçar a atualização
-        } else {
-            alert("cabou as chances");
+        }else{
+            alert("Aperte algum dos audio pra poder dar um palpite!");
             return;
         }
     }

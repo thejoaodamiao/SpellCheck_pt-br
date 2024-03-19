@@ -2,14 +2,14 @@
     color: white;
     font-size: 2.5rem;
     text-align: center;
-    margin: 2rem 0 1rem;
+    margin: 2rem 1rem ;
 }
 
 .container .audio-container{
     display: flex;
     justify-content: center;
     gap: .5rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
    
     
 }
@@ -19,3 +19,18 @@ h2{
     padding: 3rem;
 }
 
+.title{
+    font-size: 4rem;
+    text-shadow: 0px 2px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=100px);
+}
+
+
+@media screen and (max-width: 600px) {
+    .container:first-child{
+        padding:  2rem;
+        padding-top: 5rem;
+       
+    }
+
+}

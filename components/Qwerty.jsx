@@ -22,8 +22,16 @@ const Qwerty = () => {
   };
 
   const handleSubmit = () =>{
+    preventDefault(); 
     data.game(inputText);
     setInputText("")
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleSubmit();
+    }
   };
 
   return (
@@ -32,7 +40,8 @@ const Qwerty = () => {
         <input className="textarea" 
               type="text"
               value={inputText}
-              onChange={(e) => setInputText(e.target.value)} />
+              onChange={(e) => setInputText(e.target.value)} 
+              onKeyDown={handleKeyDown}/>
       </form> 
       {qwerty.map((row, rowIndex)=>(
         <div className="qwerty-container" key={rowIndex}>

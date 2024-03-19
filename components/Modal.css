@@ -1,0 +1,87 @@
+/* Popup.css */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: scroll;
+    position: absolute;
+  }
+  
+  .modal-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: 200px;
+    height: 300px;
+    word-wrap: break-word;
+  
+  }
+  .modal {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #212930;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+  }
+  .modal-button{
+    position:relative;
+    top:-60px;
+    display:inline-block;
+    margin:.1rem;
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:1.2rem;
+    text-align: center;
+    line-height: 2.3rem;
+    text-decoration:none;
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    width: 80px;
+    height: 40px;
+    user-select: none;
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+        
+    -webkit-box-shadow: 0 10px 0 #915100;
+    -moz-box-shadow: 0 5px 0 #915100;
+    box-shadow: 0 5px 0 #915100;
+        
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.modal-button:active{
+    top:-55px;
+    background-color:#F78900;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 -3px 0 #915100;
+}
+  /* Apply backdrop blur effect */
+.modal-container {
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 600px) {
+  
+}

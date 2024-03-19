@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
+
 import AudioVoicer from "../../components/AudioVoicer";
 import Qwerty from "../../components/Qwerty";
 import data from "../../data/Data";
+import ParentComponent from "../../components/ParentComponent";
+import Alert from "../../components/Alert";
+
 import "./Game.css";
 
 const Game = () => {
     const [words, setWords] = useState([]);
     const [guess, setGuess] = useState([]);
+    const [isPopupOpen, setIsPopupOpen] = useState(true);
   
     useEffect(() => {
       // Verificar se existem dados no localStorage
@@ -71,10 +76,19 @@ const Game = () => {
       const palavraEncontrada = vetor.find((item) => item.word === palavra);
       return palavraEncontrada ? palavraEncontrada.correct : null;
     };
+
+    
+    const openPopup = () => {
+      setIsPopupOpen(true);
+    };
+
+    const closePopup = () => {
+      setIsPopupOpen(false);
+    };
   
     return (
       <div className="container">
-        <h2 className="title">SpellCheck</h2>
+        <h1 className="title">Verboo</h1>
         <div className="audio-container">
           {words.map((wordInfo) => (
             <AudioVoicer
@@ -86,6 +100,8 @@ const Game = () => {
           ))}
         </div>
         <Qwerty />
+        <ParentComponent/>
+        {isPopupOpen && <Alert onClose={closePopup} />}
       </div>
     );
   };

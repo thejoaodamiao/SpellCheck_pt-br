@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "spellcheck-417311",
+  "private_key_id": "60e7470678facac61c2988b61c888ae1b50bc36c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDS8dYUGbt9PznV\nEv6OYkDTBI06Ffp2IzaSRzjAHDnYm81ozO8LDU3UzqhQ1tpQ1/v/wv8HBIRhlWIX\nvTLcJGAcAiXG5ZPauaKBRHmLMiD+84mM/1lv8QewFjS0d8Fk4VL65UVZIgVGbZNY\nSJJn1Y86P9CV7jkVk4uk3gnfEDzf9Cno9Rooh59tLY1uiOvxBif2aH10M3fq0hMF\nnT1V/janGD31tNyD2kiBTBLANaQgDM/eNyGscj73EBunxY6vDd/Lj7WPlZ5fTS92\nhHZEanwmDrnfmkDs1wAyUWZGZLm3E93NtU4KIODsd1YVd5W2inmZz0RogYsw9F2G\nas2X/W/vAgMBAAECggEAQ8FnFHTBerTkxBKCTkSz8rO7EyW9GdYssKaMzXQjhnZg\n76EnxQKEde7dNH4WiLIfYOMG3H+wb9G2PM7KN9i9QDHWZYEXUUGgN2pBqhqza4DZ\nNT9NwH2IjSBM1IzEwzz21NzwvfUGAb2vfsNst0pq43hc7NOkZVBLoeyp+gqyqvIi\nYrqdLihUYE8uNhxzb+K63te8l5K3mBngL0l6hUAPpNxWow5bLNy39S1gI19oqDEp\nruOfQz7/CH472i369hH1rydqv9JGhk8chaRyUhALynRJmL64v7Os8A9NDj8v+thP\n2bOSlu1iVxP83/Fg9C/IJkLf4PruZXeR2Cn+Rdl+SQKBgQDxK19nZFIgeBs1n97D\np9eX+2OI9N2P4FGiZTiw13r5e7jGRaU5G777c970SwYLqRR+pVEf5aMRbpgP8/Gp\npybvtW1nfQ8ZrY9YJPwEJKr25BJxFMcdl5AhHIlECUa7r71I7yIHLRCanLhB7szK\nNUllcOLmN134gKKCCT15YLN7OQKBgQDf6qXw0/a2kaWVuP9aL3V3Il8uFteu1jiQ\nR73SFxMFwGvSyGCnU3VKSwl9hnEv0nq3tE6SzQbP5dbxEgZKAUTkdX0uUpQPzjvS\nQy1Sd90r4PfjL08j3PE/ouXWDdsMTKp0hTi6ER67KcTbGoJJgbH6wrbFjVE73Whu\nUJPlxpG8ZwKBgQDLqQT4Gw//u22+6zMDp0m5XuG/VomEZrqJmVE2hcGjzYdMaKQO\nhg/R6Rfu1SxVzIMyMAlCFnqOzgY78pWx3yZSZ7PsIQAPfzH+Db2FAjIeLJwmQpWj\nt8pPK/n/KpZBCTefz9G8naHX72DqzO7EFBvXPm1eXINOx9J0Xbk8Nx1agQKBgAYw\n4q2p7qRVmpJtLwI7VbAZjzAjCYuX+LBki2cHpEsAavrE94co05FeScDiurZrx2DU\n52c/q/SLkknQCcR6DIGUjgV92wIk3ZqOqO4iykawTapGYJXJQhJUWq50a54HcJ8Q\nH+VlG8ho+zxjmz6VC2q3f34uzhQtpvmF2ND9kIH5AoGBAJkUdIS2NlDPoDdOoaGT\ne6pLlICTxciIL7CzmqA0pPP9HHIyvqhfVHuzHHInqUnGwSFDcVa/ozWBAvOPuY8X\nRntYCzSJGL/k3KWhAr2nDEmhoiqZkyTOhF0DaNkTTDg27A+APlAZJeII29RdLkFX\nBCAhUPWnXTka6If9rTz/RiF6\n-----END PRIVATE KEY-----\n",
+  "client_email": "myservice@spellcheck-417311.iam.gserviceaccount.com",
+  "client_id": "108687376137391025122",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/myservice%40spellcheck-417311.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

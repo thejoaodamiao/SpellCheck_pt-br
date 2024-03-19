@@ -3,7 +3,7 @@ import words from "./words_br.json";
 export default {
     words: [],
     count: 5,
-    currentWord: [],
+    currentWord: "",
     guessNumber: 5,
     description: "",
     guess: [],
@@ -11,16 +11,17 @@ export default {
 
     game(guess) {
         if (this.guessNumber > 0) {
-            const correct = this.currentWord.word === guess;
+            const correct = this.currentWord === guess;
             if (correct) {
                 alert("acertou a palavra :)");  
             } else {
                 alert("errou irmão, burrão");
             }
-            this.guess.push({ word: this.currentWord.word, correct });
+            this.guess.push({ word: this.currentWord, correct });
             this.guessNumber--;
             console.log(this.guessNumber);
             console.log(this.guess);
+            console.log(this.currentWord);
     
             // Atualize o estado de guess usando a função de retorno de chamada
             this.onUpdateGuess([...this.guess]); // Passando uma nova referência de array para forçar a atualização

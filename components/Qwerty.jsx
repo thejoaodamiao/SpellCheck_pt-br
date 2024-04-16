@@ -21,15 +21,20 @@ const Qwerty = () => {
     setInputText((prevText) => prevText.slice(0, -1));
   };
 
-  const handleSubmit = () =>{
-    preventDefault(); 
+  const handleSubmit = (e) =>{
+    e.preventDefault(); 
+    if(!inputText){
+      alert("digite algo")
+      return
+    }
     data.game(inputText);
-    setInputText("")
+    setInputText("");
+
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
       handleSubmit();
     }
   };

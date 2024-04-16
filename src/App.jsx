@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import Game from "./pages/Game"
 
+
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
-      <Game/>
-    </>
+   <div className="App">
+      <Outlet/>
+   </div>
   )
 }
 

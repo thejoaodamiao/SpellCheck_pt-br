@@ -83,5 +83,38 @@
 }
 
 @media screen and (max-width: 600px) {
-  
+ 
+  .modal-element{
+    width: 90%; 
+    display: flex;
+    font-size: 10px;
+    width: 200px;
+    height: 150px;
+    word-wrap: break-word;
+
+  }
+
+  .modal-button {
+    top:0px;
+    width: 100px; /* Redimensionado o botão para dispositivos móveis */
+  }
+
+  .modal-button:active{
+    top:5px;
+    background-color:#F78900;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 -3px 0 #915100;
 }
+
+  .modal {
+
+    display: block;
+    
+    }
+
+}
+
+
+  

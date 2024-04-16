@@ -9,7 +9,7 @@ const Alert = ({ onClose }) => {
       <div className="alert">
         <CiCircleAlert className="alert-icon"/>
         <p>
-            <h3>Existem navegadores recomendados por motivo de clareza nas vozes aqui utilizadas, eles sendo:</h3>
+            <span>Existem navegadores recomendados por motivo de clareza nas vozes aqui utilizadas, eles sendo:</span>
             Google Chorme, Mozilla firefox e Microsoft Edge
         </p>
         

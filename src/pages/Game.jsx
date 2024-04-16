@@ -7,6 +7,7 @@ import Alert from "../../components/Alert";
 import Modal from "../../components/Modal"
 
 import "./Game.css";
+import Timer from "../../components/Timer";
 
 const Game = () => {
     const [words, setWords] = useState([]);
@@ -128,6 +129,7 @@ const Game = () => {
             />
           ))}
         </div>
+        <Timer/>
         <Qwerty />
         {isPopupOpen && <Alert onClose={closePopup} />}
         {/* <div>

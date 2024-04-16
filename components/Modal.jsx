@@ -100,6 +100,9 @@ const Modal = ({ onClose, guess = [{word: "dale", correct: true}] , won = true }
           <h2>Mais sorte na próxima vez :(</h2>
         </div>
       )}
+      <div>
+        <p style={{fontSize: "20px"}}>{guess[0].word + ", " +guess[1].word + ", " +guess[2].word+ ", " +guess[3].word+ ", " +guess[4].word}</p >
+      </div>
       <div className="modal">
       <div className='modal-element'>
             <h2>{handleGuess(guess)}</h2>

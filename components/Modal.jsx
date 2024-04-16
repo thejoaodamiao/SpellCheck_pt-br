@@ -97,7 +97,7 @@ const Modal = ({ onClose, guess = [{word: "dale", correct: true}] , won = true }
         </div>
       ) : (
         <div>
-          <h2>Mais sorte, na próxima vez :(</h2>
+          <h2>Mais sorte na próxima vez :(</h2>
         </div>
       )}
       <div className="modal">

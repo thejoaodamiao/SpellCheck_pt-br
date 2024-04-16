@@ -129,7 +129,7 @@ const Game = () => {
           ))}
         </div>
         <Qwerty />
-        {/* {isPopupOpen && <Alert onClose={closePopup} />} */}
+        {isPopupOpen && <Alert onClose={closePopup} />}
         {/* <div>
           <button onClick={openModal}>Open Popup</button>
           {isModalOpen && <Modal onClose={closeModal} />}

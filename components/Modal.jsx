@@ -75,7 +75,7 @@ const Modal = ({ onClose, guess = [{word: "dale", correct: true}] , won = true }
     const currentDate = new Date();
     const lastDateCompare = new Date(LastDate)
     //é pra estar ....getDay() - 1, pra comparar com ontem
-    return currentDate.getDay() === lastDateCompare.getDay() &&
+    return currentDate.getDay() - 1 === lastDateCompare.getDay() &&
           currentDate.getMonth() === lastDateCompare.getMonth() &&
           currentDate.getFullYear() === lastDateCompare.getFullYear();
 

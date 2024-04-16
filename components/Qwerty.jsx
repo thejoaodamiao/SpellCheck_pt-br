@@ -21,13 +21,14 @@ const Qwerty = () => {
     setInputText((prevText) => prevText.slice(0, -1));
   };
 
-  const handleSubmit = (e) =>{
-    e.preventDefault(); 
+  const handleSubmit = () =>{
     if(!inputText){
       alert("digite algo")
       return
     }
     data.game(inputText.toLowerCase().trim());
+    console.log(inputText.toLowerCase().trim());
+
     setInputText("");
 
   };
@@ -46,7 +47,7 @@ const Qwerty = () => {
               type="text"
               value={inputText}
               onChange={(e) => setInputText(e.target.value)} 
-              onKeyDown={handleKeyDown}/>
+              onKeyDown={(e) => handleKeyDown(e)}/>
       </form> 
       {qwerty.map((row, rowIndex)=>(
         <div className="qwerty-container" key={rowIndex}>

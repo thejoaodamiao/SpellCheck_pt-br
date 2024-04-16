@@ -27,7 +27,7 @@ const Qwerty = () => {
       alert("digite algo")
       return
     }
-    data.game(inputText);
+    data.game(inputText.lower().trim());
     setInputText("");
 
   };
